@@ -1,0 +1,34 @@
+{
+  "name": "qa-automation-suite",
+  "version": "1.0.0",
+  "description": "Suite E2E en Playwright + TypeScript (POM) contra saucedemo.com, con corridas en viewport de compu y de celu.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:desktop": "playwright test --project=desktop-chrome",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": ["playwright", "typescript", "qa", "e2e", "pom"],
+  "author": "Yesica Lucero",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.1",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}
